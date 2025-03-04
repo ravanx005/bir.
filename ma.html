@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शादी का निमंत्रण</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #010912;
+            color: #32ef62;
+            padding: 20px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        #invitationMessage {
+            font-size: 20px;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            background: rgba(205, 204, 220, 0.123);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(180, 91, 91, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <video class="video-background" autoplay loop muted>
+        <source src="Video background God s Full HD 001Ganesh Temple 1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <h1 style="color: #e3fd01;">शादी के शुभ अवसर पर आपका हार्दिक स्वागत है!</h1>
+        
+        <!-- दूल्हा और दुल्हन की फोटो और नाम -->
+        <div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 180px;">
+            <div>
+                <img src="Picsart_24-12-10_15-02-49-860.jpg" alt="दूल्हा" style="width: 120px; height: 120px; border-radius: 20%; border: 3px solid #d81b60;">
+                <h1 style="font-size: 34px; font-weight: bold;">चिरं bir   (दूल्हा)</h1>
+            </div>
+            <div>
+                <img src="Picsart_24-12-10_15-02-49-860.jpg" alt="दुल्हन" style="width: 120px; height: 120px; border-radius: 20%; border: 3px solid #d81b60;">
+                <p style="font-size: 34px; font-weight: bold;">आयु कुमारी bir (दुल्हन)</p>
+            </div>
+        </div>
+
+        <p>कृपया अपना नाम दर्ज करें:</p>
+        <input type="text" id="guestInput" placeholder="अपना नाम लिखें" style="padding: 10px; font-size: 16px;">
+        <button onclick="showInvitation()" style="margin-top: 10px; padding: 10px; font-size: 16px; background-color: #fa035d; color: white; border: none; cursor: pointer;">निमंत्रण देखें</button>
+
+        <div id="invitationMessage" style="display: none; margin-top: 20px;">
+            <p>प्रिय <span id="guestName" style="font-weight: bold; color: #2202f4;"></span>,</p>
+            <p>आप सभी को निम्र निवेदन हैं ! की आप और आपने परिवार को लेकर हमारे तिलकोश मे पधारे </p>!</p>
+            <p>धन्यवाद </p>
+
+            <div style="margin-top: 20px; font-size: 28px;">
+                <p><strong>शादी की तारीख:</strong>25\05\2025</p>
+                <p><strong>समय:</strong> शाम ६:०० बजे</p>
+                <p><strong>स्थान:</strong> नावाडेरा </p>
+            </div>
+
+            <p>आपकी उपस्थिति हमारे लिए अत्यंत महत्वपूर्ण होगी!</p>
+            
+            <div style="margin-top: 20px; font-size: 14px; color: #099efb;">
+                <p>MAKDE BY,</p>
+                <p><strong>Eng.BIR BAHADUR</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showInvitation() {
+            var name = document.getElementById("guestInput").value;
+            if(name.trim() !== "") {
+                document.getElementById("guestName").innerText = name;
+                document.getElementById("invitationMessage").style.display = "block";
+            } else {
+                alert("कृपया अपना नाम दर्ज करें!");
+            }
+        }
+    </script>
+
+</body>
+</html>
+<style>
+    body {
+        overflow: auto;
+    }
+    #invitationMessage {
+        background: none;
+    }
+</style>
+</div>
